@@ -8,12 +8,15 @@ that will be used in the project
 import warnings
 warnings.filterwarnings("ignore")
 
+import numpy as np
 import pandas as pd
 
+import matplotlib.pyplot as plt
 
 
 
-def filtro_numeros_pares(lista_inicial:list) -> list:
+
+def even_numbers_filter(lista_inicial:list) -> list:
     """
     This functions filters a list in order to 
     maintain only the even numbers
@@ -43,3 +46,33 @@ class DataAnalyzer:
             raise TypeError(f"A Pandas DataFrame is expected, got a {type(df)}")
         
         self.df = df
+
+    @staticmethod
+    def dispersion_graph(x_data:pd.core.series.Series, y_data:pd.core.series.Series) -> None:
+
+        plt.figure(figsize=(10,6))
+
+        plt.title("Dispersion Graphic")
+        plt.xlabel(x_data.name)
+        plt.ylabel(y_data.name)
+
+        plt.scatter(x_data, y_data)
+
+        plt.show()
+
+        return None
+
+    @staticmethod
+    def histogram(data:pd.core.series.Series) -> None:
+
+        plt.figure(figsize=(10,6))
+
+        plt.title(f"Histogram for the distribution of '{data.name}'")
+        plt.xlabel(data.name)
+        plt.ylabel("Quantity")
+
+        data.hist(figsize=(10,6))
+
+        plt.show()
+
+        return None
