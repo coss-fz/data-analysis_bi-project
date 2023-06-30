@@ -12,7 +12,7 @@ import pytest
 
 import pandas as pd
 
-from package_module.functions import DataAnalyzer
+from src.package_module.functions import DataAnalyzer
 
 
 
