@@ -1,7 +1,7 @@
 
 """
-Script encargado de realizar las pruebas unitarias
-del script "functions.py"
+Script in charge to realize the unit tests
+for "functions.py"
 """
 
 
@@ -19,10 +19,10 @@ from src.functions import DataAnalyzer
 
 def test_DataAnalyzer():
     """
-    Esta función se encarga de testear la clase 'DataAnalyzer'
+    This function tests the Class 'DataAnalyzer'
     """
 
-    ##DataFrame válido
+    ##Valid DataFrame
     df = pd.DataFrame(
         {
             'col_1': [1, 2, 3, 4],
@@ -34,7 +34,7 @@ def test_DataAnalyzer():
     analyzer = DataAnalyzer(df)
     assert isinstance(analyzer.df, pd.core.frame.DataFrame)
 
-    ##Objeto que no es DataFrame
+    ##Object tha is not a DataFrame
     not_df = {"key_1":"value", "key_2":2.7}
     with pytest.raises(TypeError):
         DataAnalyzer(not_df)
