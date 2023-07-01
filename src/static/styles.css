@@ -1,0 +1,34 @@
+body {
+    background-color: rgba(40, 4, 40, 0.883);
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+.image-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.section-container {
+    margin: 20px;
+}
+
+.image-section {
+    text-align: center;
+}
+
+.iris-section {
+    background-color: lightblue;
+}
+
+.wine-section {
+    background-color: lightcoral;
+}
+
+.covid-section {
+    background-color: lightgreen;
+}

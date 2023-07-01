@@ -48,7 +48,7 @@ class DataAnalyzer:
         self.df = df
 
     @staticmethod
-    def dispersion_graph(x_data:pd.core.series.Series, y_data:pd.core.series.Series) -> None:
+    def dispersion_graph(x_data:pd.core.series.Series, y_data:pd.core.series.Series, absolute_path:str) -> None:
 
         plt.figure(figsize=(10,6))
         plt.title("Dispersion Graphic")
@@ -56,21 +56,23 @@ class DataAnalyzer:
         plt.ylabel(y_data.name)
 
         plt.scatter(x_data, y_data)
+        plt.savefig(absolute_path)
         plt.show()
 
         return None
 
     ##Instance Method
-    def histogram(self, figure_size=(20,12)) -> None:
+    def histogram(self, absolute_path:str, figure_size=(20,12)) -> None:
 
         plt.suptitle("Histogram for the distribution of each characteristic")
         self.df.hist(figsize=figure_size)
+        plt.savefig(absolute_path)
         plt.show()
 
         return None
 
     ##Instance Method
-    def plot_covid_cases_by_country(self, country, figure_size=(12,5)):
+    def plot_covid_cases_by_country(self, country, absolute_path:str, figure_size=(12,6)):
 
         df_country = self.df[self.df['location'] == country]
         df_country = df_country.sort_values('date')
@@ -81,5 +83,6 @@ class DataAnalyzer:
         plt.title(f"'{country}' cases through time")
         plt.xlabel('Date')
         plt.ylabel("Total Cases")
-        plt.xticks(rotation=90)
+        plt.xticks(rotation=45)
+        plt.savefig(absolute_path)
         plt.show()

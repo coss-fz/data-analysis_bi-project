@@ -1,0 +1,39 @@
+<html>
+<head>
+    <title>Dashboard-PD</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>DASHBOARD - PUBLIC DATA</h1>
+    </header>
+    <main>
+        <div class="image-grid">
+            <div class="section-container">
+                <div class="image-section iris-section">
+                    <h2>IRIS</h2>
+                    <h6>Box and Whisker Plot - Histogram - Correlation Graph</h6>
+                    <img src="{{ url_for('static', filename='images/boxplot_iris.jpg') }}" alt="Boxplot Iris" width="400" height="300">
+                    <img src="{{ url_for('static', filename='images/histogram_iris.jpg') }}" alt="Histogram Iris" width="400" height="300">
+                    <img src="{{ url_for('static', filename='images/dispersion_iris.jpg') }}" alt="Dispersion Iris" width="400" height="300">
+                </div>
+            </div>
+            <div class="section-container">
+                <div class="image-section wine-section">
+                    <h2>WINE</h2>
+                    <h6>Mean by Color- Histogram</h6>
+                    <img src="{{ url_for('static', filename='images/bar_mean_wine.jpg') }}" alt="Bar Mean Wine" width="600" height="450">
+                    <img src="{{ url_for('static', filename='images/hist_wine.jpg') }}" alt="Histogram Wine" width="600" height="450">
+                </div>
+            </div>
+            <div class="section-container">
+                <div class="image-section covid-section">
+                    <h2>COVID</h2>
+                    <h6>Cases Time Series - Specific Country</h6>
+                    <img src="{{ url_for('static', filename='images/time_series_covid.jpg') }}" alt="Time Series Covid" width="750" height="400">
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

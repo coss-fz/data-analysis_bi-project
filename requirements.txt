@@ -1,4 +1,4 @@
-####### Remember to create the virtual environment and create the packages #######
+####### Remember to create the virtual environment and create the personalized packages (setup.py) -> make build_packages #######
 pytest==4.6.9
 pytest-cov==4.1.0
 pyyaml==6.0
@@ -7,4 +7,5 @@ pathlib==1.0.1
 urllib3==1.26.16
 pandas==2.0.3
 matplotlib==3.7.1
-####### These are the requierements you need to install in the virtual environment to run the programs #######
+flask==2.3.2
+####### These are the requierements you need to install in the virtual environment to run the programs -> install_packages #######
