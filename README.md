@@ -6,7 +6,7 @@ This repository contains a project about data analysis and visualization of the 
 In order to run all the codes succesfully, you'll need to create a python virtual environment and install all the necessary requirements.
 
 ### Configure the Python Environment
-1. Create the virtual environment(version is not mandatory, but `python 3.8` is recommended)
+1. Create the virtual environment (version is not mandatory, but `python 3.8` is recommended)
    ```sh
    python<version> -m venv <venv_name>
    ```
